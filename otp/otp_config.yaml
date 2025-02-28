@@ -1,0 +1,32 @@
+
+reg:
+  code_lifetime: 120
+  code_length: 6
+  check_attempts: 3
+  attempts_before_ban: 3
+  code_ban_time: 3600
+
+  period: 3600
+  period_attempts: 1
+
+auth:
+  code_lifetime: 120
+  code_length: 6
+  check_attempts: 3
+  attempts_before_ban: 3
+  code_ban_time: 120
+
+  period: 3600
+  period_attempts: 15
+
+totp:
+  totp_interval: 30
+  digits: 6
+  secret_bytes_length: 20
+
+  attempts_before_ban: 3
+  ban_time: 120
+
+  period: 3600
+  period_attempts: 15
+

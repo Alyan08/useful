@@ -1,0 +1,4 @@
+
+need_mail_domain_filter: true
+mail_domain_whitelisted: false
+mail_domain_blacklisted: true
