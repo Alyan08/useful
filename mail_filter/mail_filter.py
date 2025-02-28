@@ -55,8 +55,8 @@ class MailFilter:
         """
         checked_domain = session.query(MailFilterModel).filter_by(mail_domain=domain).first()
 
-        if not checked_domain:
-            return not self._mail_domain_whitelisted
+        if self._mail_domain_whitelisted and not checked_domain:
+            raise MailPolicyError(" mail domain not whitelisted")
 
         if self._mail_domain_whitelisted and not checked_domain.whitelisted:
             raise MailPolicyError(" mail domain not whitelisted")
